@@ -2,8 +2,6 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 exports.__esModule = true;
 exports.TransitionLink = void 0;
 
@@ -21,7 +19,9 @@ var _triggerTransition = require("../utils/triggerTransition");
 
 var _createTransitionContext = require("../context/createTransitionContext");
 
-var _jsxFileName = "/Users/anthony_delorenzo/development/gatsby/plugins/gatsby/gatsby-plugin-transition-link-source/src/components/TransitionLink.js";
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 if (typeof _react.forwardRef === 'undefined') {
   _react.forwardRef = (C => C, function () {
@@ -47,14 +47,7 @@ const TransitionLink = /*#__PURE__*/(0, _react.forwardRef)(({
   preventScrollJump,
   ...rest
 }, ref) => {
-  return /*#__PURE__*/_react.default.createElement(_createTransitionContext.Consumer, {
-    __self: void 0,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36,
-      columnNumber: 4
-    }
-  }, ({
+  return /*#__PURE__*/_react.default.createElement(_createTransitionContext.Consumer, null, ({
     disableAnimation,
     ...context
   }) => /*#__PURE__*/_react.default.createElement(_gatsby.Link, (0, _extends2.default)({
@@ -93,14 +86,7 @@ const TransitionLink = /*#__PURE__*/(0, _react.forwardRef)(({
     to: to // use gatsby link so prefetching still happens. this is prevent defaulted in triggertransition
     ,
     ref: ref || innerRef
-  }, rest, {
-    __self: void 0,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38,
-      columnNumber: 6
-    }
-  }), children));
+  }, rest), children));
 });
 exports.TransitionLink = TransitionLink;
 TransitionLink.propTypes = {

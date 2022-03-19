@@ -13,8 +13,6 @@ var _ = _interopRequireDefault(require("../"));
 
 var _gsap = _interopRequireDefault(require("gsap"));
 
-var _jsxFileName = "/Users/anthony_delorenzo/development/gatsby/plugins/gatsby/gatsby-plugin-transition-link-source/src/AniLink/Fade.js";
-
 const fade = ({
   exit: {
     length
@@ -70,13 +68,6 @@ function Fade({
         direction: 'in'
       })
     }
-  }, props, {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36,
-      columnNumber: 3
-    }
-  }), props.children);
+  }, props), props.children);
 }
 //# sourceMappingURL=Fade.js.map

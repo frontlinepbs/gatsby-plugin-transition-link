@@ -1,7 +1,5 @@
 "use strict";
 
-var _jsxFileName = "/Users/anthony_delorenzo/development/gatsby/plugins/gatsby/gatsby-plugin-transition-link-source/src/wrap-root.js";
-
 const React = require('react');
 
 const {
@@ -23,13 +21,6 @@ module.exports = ({
     });
   }
 
-  return /*#__PURE__*/React.createElement(InternalProvider, {
-    __self: void 0,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 9
-    }
-  }, element);
+  return /*#__PURE__*/React.createElement(InternalProvider, null, element);
 };
 //# sourceMappingURL=wrap-root.js.map

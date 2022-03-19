@@ -13,7 +13,6 @@ var _ = _interopRequireDefault(require("../"));
 
 var _gsap = _interopRequireDefault(require("gsap"));
 
-var _jsxFileName = "/Users/anthony_delorenzo/development/gatsby/plugins/gatsby/gatsby-plugin-transition-link-source/src/AniLink/Swipe.js";
 const boxShadow = '0 0 100px 10px rgba(0, 0, 0, 0.12941176470588237)';
 
 const swipeTopDirection = (direction, reverse) => {
@@ -171,13 +170,6 @@ function SwipeOver({
       }),
       zIndex: entryZ
     }
-  }, props, {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 106,
-      columnNumber: 3
-    }
-  }), props.children);
+  }, props), props.children);
 }
 //# sourceMappingURL=Swipe.js.map

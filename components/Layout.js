@@ -1,13 +1,7 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 exports.__esModule = true;
 exports.LayoutComponent = void 0;
-
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-
-var _jsxFileName = "/Users/anthony_delorenzo/development/gatsby/plugins/gatsby/gatsby-plugin-transition-link-source/src/components/Layout.js";
 
 /* eslint-disable no-undef */
 const React = require('react');
@@ -36,14 +30,7 @@ const LayoutComponent = ({
   ...props
 }) => {
   if (Layout) {
-    return /*#__PURE__*/React.createElement(Layout, (0, _extends2.default)({}, props, {
-      __self: void 0,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 30,
-        columnNumber: 10
-      }
-    }), children);
+    return /*#__PURE__*/React.createElement(Layout, props, children);
   } else {
     return children;
   }

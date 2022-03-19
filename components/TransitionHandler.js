@@ -1,7 +1,5 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 exports.__esModule = true;
@@ -27,7 +25,10 @@ var _secondsMs = require("../utils/secondsMs");
 
 require("../style.css");
 
-var _jsxFileName = "/Users/anthony_delorenzo/development/gatsby/plugins/gatsby/gatsby-plugin-transition-link-source/src/components/TransitionHandler.js";
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 const DelayedTransition = (0, _delayTransitionRender.default)(_reactTransitionGroup.Transition);
 
 class TransitionHandler extends _react.Component {
@@ -39,14 +40,7 @@ class TransitionHandler extends _react.Component {
       children,
       injectPageProps = true
     } = props;
-    return /*#__PURE__*/_react.default.createElement(_createTransitionContext.Consumer, {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 21,
-        columnNumber: 4
-      }
-    }, ({
+    return /*#__PURE__*/_react.default.createElement(_createTransitionContext.Consumer, null, ({
       exitDelay,
       exitLength,
       exitState,
@@ -65,14 +59,7 @@ class TransitionHandler extends _react.Component {
       hash,
       e
     }) => {
-      return /*#__PURE__*/_react.default.createElement(_router.Location, {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 42,
-          columnNumber: 7
-        }
-      }, ({
+      return /*#__PURE__*/_react.default.createElement(_router.Location, null, ({
         location
       }) => {
         const {
@@ -81,21 +68,9 @@ class TransitionHandler extends _react.Component {
           key: locationKey
         } = location;
         return /*#__PURE__*/_react.default.createElement("div", {
-          className: "tl-edges",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 51,
-            columnNumber: 10
-          }
+          className: "tl-edges"
         }, /*#__PURE__*/_react.default.createElement(_reactTransitionGroup.TransitionGroup, {
-          component: null,
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 52,
-            columnNumber: 11
-          }
+          component: null
         }, /*#__PURE__*/_react.default.createElement(DelayedTransition, {
           key: pathname // we're using seconds but transitiongroup uses ms
           ,
@@ -128,13 +103,7 @@ class TransitionHandler extends _react.Component {
             exitProps,
             triggerResolve,
             e
-          }),
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 53,
-            columnNumber: 12
-          }
+          })
         }, transitionStatus => {
           const mount = transitionStatus === 'entering' || transitionStatus === 'entered';
           const states = {
@@ -166,13 +135,7 @@ class TransitionHandler extends _react.Component {
             transitionState: transitionState,
             children: children,
             injectPageProps: injectPageProps,
-            appearAfter: (0, _secondsMs.getMs)(appearAfter),
-            __self: this,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 132,
-              columnNumber: 15
-            }
+            appearAfter: (0, _secondsMs.getMs)(appearAfter)
           });
         })));
       });

@@ -2,8 +2,6 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 exports.__esModule = true;
 exports.default = void 0;
 
@@ -15,7 +13,9 @@ var _ = _interopRequireWildcard(require("../"));
 
 var _gsap = _interopRequireDefault(require("gsap"));
 
-var _jsxFileName = "/Users/anthony_delorenzo/development/gatsby/plugins/gatsby/gatsby-plugin-transition-link-source/src/AniLink/Cover.js";
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 class Cover extends _react.Component {
   constructor(_props) {
@@ -127,21 +127,7 @@ class Cover extends _react.Component {
       entry: {
         delay: length / 2
       }
-    }, props, {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 92,
-        columnNumber: 5
-      }
-    }), this.props.children), /*#__PURE__*/_react.default.createElement(_.TransitionPortal, {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 110,
-        columnNumber: 5
-      }
-    }, /*#__PURE__*/_react.default.createElement("div", {
+    }, props), this.props.children), /*#__PURE__*/_react.default.createElement(_.TransitionPortal, null, /*#__PURE__*/_react.default.createElement("div", {
       className: "tl-cover-el",
       style: {
         position: "fixed",
@@ -153,12 +139,6 @@ class Cover extends _react.Component {
         width: "100vw",
         height: "100vh",
         transform: "translateY(100%)"
-      },
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 111,
-        columnNumber: 6
       }
     })));
   }

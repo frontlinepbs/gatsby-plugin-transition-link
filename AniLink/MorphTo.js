@@ -11,8 +11,6 @@ var _ = _interopRequireDefault(require("../"));
 
 var _gsap = _interopRequireDefault(require("gsap"));
 
-var _jsxFileName = "/Users/anthony_delorenzo/development/gatsby/plugins/gatsby/gatsby-plugin-transition-link-source/src/AniLink/MorphTo.js";
-
 const MorphTo = ({
   children,
   to,
@@ -41,12 +39,6 @@ const MorphTo = ({
       height: finalMeasurements.height,
       duration
     });
-  },
-  __self: void 0,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 6,
-    columnNumber: 2
   }
 }, children);
 

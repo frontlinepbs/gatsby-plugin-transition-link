@@ -4,8 +4,6 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _jsxFileName = "/Users/anthony_delorenzo/development/gatsby/plugins/gatsby/gatsby-plugin-transition-link-source/src/wrap-page.js";
-
 const React = require('react');
 
 const TransitionHandler = require('./components/TransitionHandler').default;
@@ -17,20 +15,6 @@ module.exports = ({
   element,
   props
 }, pluginOptions) => {
-  return /*#__PURE__*/React.createElement(Layout, (0, _extends2.default)({}, props, {
-    __self: void 0,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8,
-      columnNumber: 3
-    }
-  }), /*#__PURE__*/React.createElement(TransitionHandler, (0, _extends2.default)({}, props, pluginOptions, {
-    __self: void 0,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9,
-      columnNumber: 4
-    }
-  }), element));
+  return /*#__PURE__*/React.createElement(Layout, props, /*#__PURE__*/React.createElement(TransitionHandler, (0, _extends2.default)({}, props, pluginOptions), element));
 };
 //# sourceMappingURL=wrap-page.js.map

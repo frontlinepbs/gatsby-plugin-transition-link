@@ -5,8 +5,6 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 exports.__esModule = true;
 exports.default = DefaultTransition;
 
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _Cover = _interopRequireDefault(require("./Cover"));
@@ -21,55 +19,11 @@ var _ = _interopRequireDefault(require("../"));
 
 var _MorphTo = _interopRequireDefault(require("./MorphTo"));
 
-var _jsxFileName = "/Users/anthony_delorenzo/development/gatsby/plugins/gatsby/gatsby-plugin-transition-link-source/src/AniLink/index.js";
-
 function DefaultTransition(allProps) {
   const {
     children,
     ...props
   } = allProps;
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, props.cover && /*#__PURE__*/_react.default.createElement(_Cover.default, (0, _extends2.default)({}, props, {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13,
-      columnNumber: 20
-    }
-  }), children), props.fade && /*#__PURE__*/_react.default.createElement(_Fade.default, (0, _extends2.default)({}, props, {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14,
-      columnNumber: 19
-    }
-  }), children), props.paintDrip && /*#__PURE__*/_react.default.createElement(_PaintDrip.default, (0, _extends2.default)({}, props, {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15,
-      columnNumber: 24
-    }
-  }), children), props.swipe && /*#__PURE__*/_react.default.createElement(_Swipe.default, (0, _extends2.default)({}, props, {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16,
-      columnNumber: 20
-    }
-  }), children), !!props.morph && /*#__PURE__*/_react.default.createElement(_MorphTo.default, (0, _extends2.default)({}, props, {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 22
-    }
-  }), children), !props.cover && !props.fade && !props.paintDrip && !props.swipe && !props.morph && /*#__PURE__*/_react.default.createElement(_.default, (0, _extends2.default)({}, props, {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24,
-      columnNumber: 6
-    }
-  }), children));
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, props.cover && /*#__PURE__*/_react.default.createElement(_Cover.default, props, children), props.fade && /*#__PURE__*/_react.default.createElement(_Fade.default, props, children), props.paintDrip && /*#__PURE__*/_react.default.createElement(_PaintDrip.default, props, children), props.swipe && /*#__PURE__*/_react.default.createElement(_Swipe.default, props, children), !!props.morph && /*#__PURE__*/_react.default.createElement(_MorphTo.default, props, children), !props.cover && !props.fade && !props.paintDrip && !props.swipe && !props.morph && /*#__PURE__*/_react.default.createElement(_.default, props, children));
 }
 //# sourceMappingURL=index.js.map
