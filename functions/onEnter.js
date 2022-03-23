@@ -34,9 +34,8 @@ const onEnter = ({
           const clientOffsetTop = hashElement.offsetTop;
           scrollTo = [0, clientOffsetTop];
         }
-      }
+      } // window.scrollTo(...scrollTo)
 
-      window.scrollTo(...scrollTo);
     }, appearAfter);
   } else if (!inTransition) {
     // If session storage fails due to cookies being disabled,
