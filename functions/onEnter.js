@@ -22,32 +22,38 @@ const onEnter = ({
   appearAfter = 0,
   e
 }) => {
-  (0, _requestanimationframeTimer.setTimeout)(() => {
-    const storage = Object.keys(sessionStorage);
-    const items = [];
-    storage.forEach(item => {
-      split = item.split('|');
+  if (inTransition && !preventScrollJump) {
+    (0, _requestanimationframeTimer.setTimeout)(() => {
+      let scrollTo = [0, 0]; // handle hashes that link to ID's
+      // for ex /page-2#heading-section
 
-      if (split.length > 0) {
-        if (split[0] === "@@scroll" && split[1] === pathname && pathname.includes('event') === false) {
-          items.push(split);
+      if (hash) {
+        const hashElement = document.getElementById(hash);
+
+        if (hashElement) {
+          const clientOffsetTop = hashElement.offsetTop;
+          scrollTo = [0, clientOffsetTop];
         }
       }
-    });
 
-    if (items.length > 0) {
-      const sortedArray = items.sort(function (a, b) {
-        return b[2] - a[2];
-      });
-      const lastScrolledArr = sortedArray[0];
-      const lastScrolledKey = lastScrolledArr.join("|");
-      const lastScrolled = JSON.parse(sessionStorage.getItem(lastScrolledKey));
-      const position = [0, lastScrolled];
-      (0, _requestanimationframeTimer.setTimeout)(() => {
-        window.scrollTo(...position);
-      }, 0);
+      window.scrollTo(...scrollTo);
+    }, appearAfter);
+  } else if (!inTransition) {
+    // If session storage fails due to cookies being disabled,
+    // scroll to the top after every navigation
+    let position = [0, 0];
+
+    try {
+      const storageKey = `@@scroll|${pathname}|${locationKey}`;
+      const y = JSON.parse(sessionStorage.getItem(storageKey)) || 0;
+      position = [0, y];
+    } catch (e) {
+      console.warn(`[gatsby-plugin-transition-link] Unable to save state in sessionStorage; sessionStorage is not available.`);
+    } finally {
+      window.scrollTo(...position);
     }
-  });
+  }
+
   if (!inTransition) return;
   const {
     trigger: removed,
